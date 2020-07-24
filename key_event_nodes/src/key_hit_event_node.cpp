@@ -25,7 +25,7 @@ KeyHitEventNode::KeyHitEventNode(
 ): Node("key_hit_event_node", name_space, options){
   using namespace std::chrono_literals;
 
-  declare_parameter("interval_ms", 200);
+  declare_parameter("interval_ms", 100);
   auto interval_ms = this->get_parameter("interval_ms").as_int();
 
   _pub = this->create_publisher<key_event_msgs::msg::KeyEvent>("key_hit_event", rclcpp::QoS(10));
@@ -36,13 +36,14 @@ KeyHitEventNode::KeyHitEventNode(
 }
 
 void KeyHitEventNode::_pub_callback(void){
+  auto msg = std::make_shared<key_event_msgs::msg::KeyEvent>();
   if(_kbhit()){
-    char input = getchar();
-    auto msg = std::make_shared<key_event_msgs::msg::KeyEvent>();
-    msg->key = input;
-//    RCLCPP_INFO(this->get_logger(), "key:%c", input);
-    _pub->publish(*msg);
+    msg->key = getchar();
+  }else{
+    msg->key = '\0';
   }
+//  RCLCPP_INFO(this->get_logger(), "key:%c", msg->key);
+  _pub->publish(*msg);
 }
 
 int KeyHitEventNode::_kbhit(void){

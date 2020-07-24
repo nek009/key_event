@@ -21,21 +21,28 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(key_event_msgs REQUIRED)
 
+set(key_hit_event_node_dependencies
+  "rclcpp"
+  "rclcpp_components"
+  "key_event_msgs"
+)
 
 add_library(key_hit_event_node SHARED
   src/key_hit_event_node.cpp
 )
 rclcpp_components_register_nodes(key_hit_event_node
-  "key_event::KeyHitEventNode"
+  PLUGIN "key_event::KeyHitEventNode"
+  EXECUTABLE key_hit_event_node
 )
 target_compile_definitions(key_hit_event_node
   PRIVATE "MY_LIBRARY_BUILDING_LIBRARY"
 )
 target_compile_options(key_hit_event_node PUBLIC -Wall)
 ament_target_dependencies(key_hit_event_node
-  rclcpp
-  rclcpp_components
-  key_event_msgs
+  ${key_hit_event_node_dependencies}
+#  rclcpp
+#  rclcpp_components
+#  key_event_msgs
 )
 
 target_include_directories(key_hit_event_node
@@ -51,6 +58,9 @@ if(NOT WIN32)
 endif()
 
 ament_export_targets(export_${PROJECT_NAME} HAS_LIBRARY_TARGET)
+ament_export_dependencies(
+  ${key_hit_event_node_dependencies}
+)
 
 install(
   DIRECTORY include/
