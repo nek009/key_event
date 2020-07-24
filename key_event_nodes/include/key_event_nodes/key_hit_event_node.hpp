@@ -21,6 +21,12 @@ public:
     const std::string& name_space,
     const rclcpp::NodeOptions& options = rclcpp::NodeOptions()
   );
+private:
+  rclcpp::Publisher<key_event_msgs::msg::KeyEvent>::SharedPtr _pub;
+  rclcpp::TimerBase::SharedPtr _pub_timer;
+
+  int _kbhit(void);
+  void _pub_callback(void);
 };
 
 } // end of namespace
