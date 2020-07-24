@@ -1,0 +1,16 @@
+*~
+\#*#
+*.o
+*.aux
+*.dvi
+*.log
+*.synctex.gz
+*.pdf
+build/*
+install/*
+log/*
+.nfs0000*
+__pycache__/
+*.py[cod]
+*$py.class
+videos/
