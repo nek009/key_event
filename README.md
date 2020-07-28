@@ -9,5 +9,6 @@
 * 2020/07/24:プロジェクト開始
 
 # Documents for users
-* [プロジェクトBWiki](http://irobot-gitlab.csse.muroran-it.ac.jp/universal_tools/ros2/key_event/-/wikis/home)
-    * インストール・使い方など
+* [プロジェクトWiki](http://irobot-gitlab.csse.muroran-it.ac.jp/universal_tools/ros2/key_event/-/wikis/home)
+    * 使い方など
+    * [インストール](http://irobot-gitlab.csse.muroran-it.ac.jp/universal_tools/ros2/key_event/-/wikis/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
