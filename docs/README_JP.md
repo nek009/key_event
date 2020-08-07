@@ -11,7 +11,7 @@ $ git clone [本プロジェクトのURL]
 $ colcon build --symlink-install
 ```
 
-[more detailed...](Installation.md)
+[more detailed...](Installation_JP.md)
 
 # Useage
 `colcon build`を行ったディレクトリにて作業．
