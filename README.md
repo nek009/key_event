@@ -1,10 +1,14 @@
 # Information
-* $B%a%$%s%V%i%s%A(B:
+エンターキーを押さなくてもキー入力を拾い上げ定期的にpublishするノード．文字入力がない場合は'\0'文字をpublishする．
+例えばOpenAI Gymなどで，'0'，'1'と押すだけで行動入力してくれる('0'+エンターキー，'1'+エンターキーとしなくてよい)．
+
+* メインブランチ
     * master
 
-## $BMzNr(B
-* 2020/06/11:$B%W%m%8%'%/%H3+;O(B
+## 更新履歴
+* 2020/07/24:プロジェクト開始
 
 # Documents for users
-* [$B%W%m%8%'%/%H(BWiki](http://irobot-gitlab.csse.muroran-it.ac.jp/universal_tools/ros2/key_event/-/wikis/home)
-    * $B%$%s%9%H!<%k!&;H$$J}$J$I(B
+* [プロジェクトWiki](http://irobot-gitlab.csse.muroran-it.ac.jp/universal_tools/ros2/key_event/-/wikis/home)
+    * [インストール](http://irobot-gitlab.csse.muroran-it.ac.jp/universal_tools/ros2/key_event/-/wikis/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
+    * 使い方など
