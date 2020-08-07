@@ -13,7 +13,7 @@ $ colcon build --symlink-install
 
 [more detailed...](Installation_JP.md)
 
-# Useage
+# Usage
 `colcon build`を行ったディレクトリにて作業．
 
 ## targetによる実行
