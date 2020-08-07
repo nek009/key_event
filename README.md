@@ -7,7 +7,7 @@ ROS2 node. It publishes key input periodically, or publishes '\0' for no key inp
 Premise: Installed [ROS2](https://index.ros.org/doc/ros2/) system.
 
 ```
-$ git clone [本プロジェクトのURL]
+$ git clone [URL of this project]
 $ colcon build --symlink-install
 ```
 
