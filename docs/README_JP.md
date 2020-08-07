@@ -24,19 +24,19 @@ $ ros2 run tests key_hit_event_target
 ## componentsによる実行
 terminalを二つ起動，それぞれで以下を実行．
 
-terminal1
+terminal-1
 ```
 $ . install/setup.bash
 $ ros2 run rclcpp_components component_container
 ```
 
-terminal2
+terminal-2
 ```
 $ . install/setup.bash
 $ ros2 component load /ComponentManager key_event_nodes key_event::KeyHitEventNode
 ```
 
-targetを起動したterminalもしくはterminal1でキー入力に対するpublishが行われる．
+targetを起動したterminalもしくはterminal-1でキー入力に対するpublishが行われる．
 
 ## 確認
 
