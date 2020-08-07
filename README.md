@@ -1,14 +1,65 @@
-# Information
-エンターキーを押さなくてもキー入力を拾い上げ定期的にpublishするノード．文字入力がない場合は'\0'文字をpublishする．
-例えばOpenAI Gymなどで，'0'，'1'と押すだけで行動入力してくれる('0'+エンターキー，'1'+エンターキーとしなくてよい)．
+[for Japanese:日本語](docs/README_JP.md)
 
-* メインブランチ
+# Description
+ROS2 node. It publishes key input periodically, or publishes '\0' for no key input.
+
+# Installation
+Premise: Installed [ROS2](https://index.ros.org/doc/ros2/) system.
+
+```
+$ git clone [本プロジェクトのURL]
+$ colcon build --symlink-install
+```
+
+# Useage
+Works under the directory where executed `colcon build'.
+
+## Execution by target node
+
+```
+$ . install/setup.bash
+$ ros2 run tests key_hit_event_target
+```
+
+## Execution with components.
+Starts up two terminals, executes following command on each terminal.
+
+terminal-1
+```
+$ . install/setup.bash
+$ ros2 run rclcpp_components component_container
+```
+
+terminal-2
+```
+$ . install/setup.bash
+$ ros2 component load /ComponentManager key_event_nodes key_event::KeyHitEventNode
+```
+
+After that, publishing key inputs on terminal-1.
+
+## confirmation
+
+```
+$ . install/setup.bash
+$ ros2 topic echo /key_hit_event
+```
+
+# Information for ROS developer
+## msg messages
+### topic名:key_hit_event
+
+* char key
+    * inputted key
+    * `\0` for no key input
+
+## parameters
+
+* int interval_ms
+    * interval time for publishing
+    * unit: millisecond
+    * default value: 100(ms)
+
+# Release
+* main branch
     * master
-
-## 更新履歴
-* 2020/07/24:プロジェクト開始
-
-# Documents for users
-* [プロジェクトWiki](http://irobot-gitlab.csse.muroran-it.ac.jp/universal_tools/ros2/key_event/-/wikis/home)
-    * [インストール](http://irobot-gitlab.csse.muroran-it.ac.jp/universal_tools/ros2/key_event/-/wikis/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
-    * 使い方など
