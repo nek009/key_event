@@ -13,7 +13,7 @@ $ colcon build --symlink-install
 
 [more detailed...](docs/Installation.md)
 
-# Useage
+# Usage
 Works under the directory where executed `colcon build'.
 
 ## Execution by target node
