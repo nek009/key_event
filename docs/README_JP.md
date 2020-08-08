@@ -34,20 +34,7 @@ key_hit_event_targetを起動したterminalでキー入力するとpublishされ
 [more detailed...](Usage_JP.md)
 
 
-# Information for ROS developer
-## msg messages
-### topic名:key_hit_event
-
-* char key
-    * 入力されたキー
-    * 入力されていない場合`\0`
-
-## parameters
-
-* int interval_ms
-    * publishする間隔
-    * 単位: ミリ秒
-    * デフォルト値: 100(ms)
+# [Information for ROS2 developer](Information_for_ROS2_developer_JP.md)
 
 # Release
 * メインブランチ
