@@ -53,7 +53,8 @@ $ git submodule update
 アップデートを取り込んで更新．
 
 ```
-$ git submodule fetch
-$ git submodule merge origin/master
+$ cd [key_eventのディレクトリ]
+$ git fetch
+$ git merge origin/master
 ```
 
