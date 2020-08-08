@@ -1,6 +1,7 @@
 # package名: key_event_nodes
 ## key_event::KeyHitEventNode
 ### topic名: key_hit_event
+---
 #### サービス内容
 publisher側.
 定期的(interval_ms)に入力されたキーをpublishする．入力がない時には`\0`文字をpublishする．
@@ -13,6 +14,7 @@ publisher側.
     * 入力されていない場合`\0`
 
 ### parameters
+---
 [key_event/key_event_nodes/yaml/key_hit_event_node.yaml](../key_event_nodes/yaml/key_hit_event_node.yaml)
 
 * int interval_ms
