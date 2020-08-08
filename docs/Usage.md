@@ -41,3 +41,12 @@ $ ros2 topic echo /key_hit_event
 ```
 
 The published keys are displayed.
+
+## Use as shared library
+
+* include file
+    * #include "key_event_nodes/key_hit_event_node.hpp"
+* クラス名
+    * key_event::KeyHitEventNode
+
+Reference: [`tests`](../tests) project.
