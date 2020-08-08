@@ -43,7 +43,8 @@ $ git submodule update
 #### Submodule operations: Update
 
 ```
-$ git submodule fetch
-$ git submodule merge origin/master
+$ cd [Directory of key_event]
+$ git fetch
+$ git merge origin/master
 ```
 
