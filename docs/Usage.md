@@ -49,4 +49,4 @@ The published keys are displayed.
 * クラス名
     * key_event::KeyHitEventNode
 
-Reference: [`tests`](../tests) project.
+See [`tests`](../tests) project to know a detailed way to use it.
