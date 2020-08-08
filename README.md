@@ -14,7 +14,7 @@ $ colcon build --symlink-install
 [more detailed...](docs/Installation.md)
 
 # Usage
-Works under the directory where executed `colcon build'.
+Works under the directory where executed `colcon build`.
 
 ```
 $ . install/setup.bash
