@@ -35,20 +35,7 @@ Under no input key status, `\0` will be kept publishing periodically.
 [more detailed...](docs/Usage.md)
 
 
-# Information for ROS developer
-## msg messages
-### topic name:key_hit_event
-
-* char key
-    * inputted key
-    * `\0` for no key input
-
-## parameters
-
-* int interval_ms
-    * interval time for publishing
-    * unit: millisecond
-    * default value: 100(ms)
+# [Information for ROS2 developer](docs/Information_for_ROS2_developer.md)
 
 # Release
 * main branch
