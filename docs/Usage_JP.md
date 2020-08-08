@@ -12,6 +12,10 @@ $ . install/setup.bash
 $ ros2 run tests key_hit_event_target --ros-args --params-file [YAMLファイル]
 ```
 
+key_hit_event_targetを起動したterminalでキー入力するとpublishされる．
+キー入力されていない時には`\0`がpublishされる．
+
+
 ## componentsによる実行
 terminalを二つ起動，それぞれで以下を実行．
 
@@ -27,6 +31,8 @@ $ . install/setup.bash
 $ ros2 component load /ComponentManager key_event_nodes key_event::KeyHitEventNode
 ```
 
+terminal-1でキー入力するとpublishされる．
+キー入力されていない時には`\0`がpublishされる．
 
 ## 確認
 新しくterminalを開き，`colcon build`を行ったディレクトリにて実行．
@@ -36,4 +42,4 @@ $ . install/setup.bash
 $ ros2 topic echo /key_hit_event
 ```
 
-key_hit_event_targetを起動したterminalでキー入力するとpublishされていることが確認できる．
+publishされているキー入力を表示し続ける．
