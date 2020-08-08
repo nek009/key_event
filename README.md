@@ -16,40 +16,28 @@ $ colcon build --symlink-install
 # Usage
 Works under the directory where executed `colcon build'.
 
-## Execution by target node
-
 ```
 $ . install/setup.bash
 $ ros2 run tests key_hit_event_target
 ```
 
-## Execution with components.
-Starts up two terminals, executes following command on each terminal.
-
-terminal-1
-```
-$ . install/setup.bash
-$ ros2 run rclcpp_components component_container
-```
-
-terminal-2
-```
-$ . install/setup.bash
-$ ros2 component load /ComponentManager key_event_nodes key_event::KeyHitEventNode
-```
-
-After that, publishing key inputs on terminal-1.
-
-## confirmation
+## Confirmation
+Open new terminal, change directory to execute `colcon build`.
 
 ```
 $ . install/setup.bash
 $ ros2 topic echo /key_hit_event
 ```
 
+By inputing keys on the terminal where key_hit_event_target works, we can confirm the keys are published.
+Under no input key status, `\0` will be kept publishing periodically.
+
+[more detailed...](docs/Usage.md)
+
+
 # Information for ROS developer
 ## msg messages
-### topic名:key_hit_event
+### topic name:key_hit_event
 
 * char key
     * inputted key
