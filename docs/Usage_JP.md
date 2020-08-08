@@ -43,3 +43,12 @@ $ ros2 topic echo /key_hit_event
 ```
 
 publishされているキー入力を表示し続ける．
+
+## 共有ライブラリとして使用
+
+* include file
+    * #include "key_event_nodes/key_hit_event_node.hpp"
+* クラス名
+    * key_event::KeyHitEventNode
+
+詳しい組み込み方は[`tests`](../tests)プロジェクトを参照のこと．
